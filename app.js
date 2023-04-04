@@ -6,7 +6,7 @@ const rezepteRouter = require('./routes/rezepte')
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use('/tables', tablesRouter)
-/* app.use('/rezepte', rezepteRouter) */
+app.use('/rezepte', rezepteRouter)
 
 app.get('/', (req, res) => {
     res.send("Welcome to the Nashbar(the ultimate cockbook)")
