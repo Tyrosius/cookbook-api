@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const tablesRouter = require('./routes/tables')
 const rezepteRouter = require('./routes/rezepte')
-
+const cors = require('cors');
+app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use('/tables', tablesRouter)
