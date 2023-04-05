@@ -6,7 +6,7 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use('/tables', tablesRouter)
+/* app.use('/tables', tablesRouter) */
 app.use('/rezepte', rezepteRouter)
 
 app.get('/', (req, res) => {

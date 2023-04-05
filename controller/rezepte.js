@@ -10,7 +10,7 @@ const listRezeptObjects = (req, res) => {
         )
 
         const stringZutaten = zutaten.map((zutat) => {
-            const zutatString = zutat.einheit ? zutat.zutaten_menge + zutat.einheit + "  " + zutat.zutaten_name : zutat.zutaten_menge + "  " + zutat.zutaten_name;
+            const zutatString = zutat.einheit ? zutat.zutaten_menge + " " + zutat.einheit + "  " + zutat.zutaten_name : zutat.zutaten_menge ? zutat.zutaten_menge + "  " + zutat.zutaten_name : zutat.zutaten_name;
             return zutatString
         })
 
